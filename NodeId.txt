@@ -1,0 +1,4 @@
+//Coordinate ids and p values of each reaction in a pathway 
+KOId  FromId	ToId	PValue
+C00074	C00074	C00022	0.04
+C00022	C00022	C00024	0.05
