@@ -2,31 +2,21 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>Image Detail Pop Up</title>
-    <!--style type="text/css" media="screen">
-      body, html {
-        margin: 0;
-        padding: 0;
-        background-color: #fff;
-        height: 100%;
-      }
-      #paper {
-        width:100%;
-        height: 100%;
-      }
-      #buttons {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-      }
-    </style-->
-
-<!-- Drawing single line -->
+   
+   <!-- Drawing single line -->
 
 
-<script type="text/javascript">
+<!--script type="text/javascript">
 var g = new Graphics();
 g.drawLine(100,50,200,70);
 g.paint();
 }
-</script>
+</script-->
+bla = ""
+var lineLength = Math.sqrt( (Ax-Bx)*(Ax-Bx)+(Ay-By)*(Ay-By) );
+for( var i=0; i<lineLength; i++ )
+{
+    bla += "<div style='position:absolute;left:"+ Math.round( Ax+(Bx-Ax)*i/lineLength  ) +"px;top:"+ Math.round( Ay+(By-Ay)*i/lineLength  ) +"px;width:1px;height:1px;background:#000'></div>";
+}
+document.body.innerHTML += bla
 </head> </html>
