@@ -1,37 +1,26 @@
 <!DOCTYPE HTML>
 <html>
-<img class="coords" src="http://i.imgur.com/bhvpy.png">
-<head>
-<script type="text/javascript">
-var tooltip = $('<div id="tooltip">').appendTo( 'body' )[0];
+$(function () {
+    var canvas = $('#canvas').get(0);
+    var ctx = canvas.getContext('2d');
+    var w = h = canvas.width = canvas.height = 300;
 
-$('.coords').
-    each(function () {
-        var pos = $( this ).position(),
-            top = pos.top,
-            left = pos.left,
-            width = $( this ).width(),
-            height = $( this ).height();
+    ctx.fillStyle = '#000';
+    ctx.fillRect(0, 0, w, h);
 
-        $(this).
-            mousemove(function (e){
-                var x, y;
-                
-                x = (( e.clientX - left ) / width ).toFixed( 1 ),
-                y = (( height - (e.clientY - top)) / height ).toFixed( 1 );
+    canvas.addEventListener('mousemove', function (e) {
+        var x = e.pageX - canvas.offsetLeft;
+        var y = e.pageY - canvas.offsetTop;
+        var str = 'X : ' + x + ', ' + 'Y :' + y;
 
-                $(tooltip).text(x + ', ' + y).css({
-                    left: e.clientX - 30,
-                    top: e.clientY - 30
-                }).show();
-            }).
-            mouseleave(function () {
-                $( tooltip ).hide();
-            }); 
-    });
-</script>
-</head>
-<body>
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, 0, w, h);
+        ctx.fillStyle = '#3f3f3f';
+        ctx.fillRect(x + 10, y + 10, 70, 20);
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 20px verdana';
+        ctx.fillText(str, x + 10, y + 25, 60);
 
-</body>
+    }, 0);
+});
 </html>
