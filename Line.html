@@ -1,39 +1,37 @@
 <!DOCTYPE HTML>
 <html>
+<img class="coords" src="http://i.imgur.com/bhvpy.png">
 <head>
 <script type="text/javascript">
-function drawShape(){
-  // get the canvas element using the DOM
-  var canvas = document.getElementById('mycanvas');
- 
-  // Make sure we don't execute when canvas isn't supported
-  if (canvas.getContext){
- 
-    // use getContext to use the canvas for drawing
-    var ctx = canvas.getContext('2d');
- 
-    // Filled triangle
-    ctx.beginPath();
-    ctx.moveTo(25,25);
-    ctx.lineTo(105,25);
-    ctx.lineTo(25,105);
-    ctx.fill();
-    
-    // Stroked triangle
-    ctx.beginPath();
-    ctx.moveTo(125,125);
-    ctx.lineTo(125,45);
-    ctx.lineTo(45,125);
-    ctx.closePath();
-    ctx.stroke();
- 
-  } else {
-    alert('You need Safari or Firefox 1.5+ to see this demo.');
-  }
-}
+var tooltip = $( '<div id="tooltip">' ).appendTo( 'body' )[0];
+
+$( '.coords' ).
+    each(function () {
+        var pos = $( this ).position(),
+            top = pos.top,
+            left = pos.left,
+            width = $( this ).width(),
+            height = $( this ).height();
+
+        $( this ).
+            mousemove(function ( e ) {
+                var x, y;
+
+                x = ( ( e.clientX - left ) / width ).toFixed( 1 ),
+                y = ( ( height - ( e.clientY - top ) ) / height ).toFixed( 1 );
+
+                $( tooltip ).text( x + ', ' + y ).css({
+                    left: e.clientX - 30,
+                    top: e.clientY - 30
+                }).show();
+            }).
+            mouseleave(function () {
+                $( tooltip ).hide();
+            }); 
+    });
 </script>
 </head>
-<body onload="drawShape();">
-   <canvas id="mycanvas"></canvas>
+<body>
+
 </body>
 </html>
