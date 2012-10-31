@@ -13,14 +13,14 @@ $('.coords').
             width = $( this ).width(),
             height = $( this ).height();
 
-        $( this ).
-            mousemove(function ( e ) {
+        $(this).
+            mousemove(function (e){
                 var x, y;
+                
+                x = (( e.clientX - left ) / width ).toFixed( 1 ),
+                y = (( height - (e.clientY - top)) / height ).toFixed( 1 );
 
-                x = ( ( e.clientX - left ) / width ).toFixed( 1 ),
-                y = ( ( height - ( e.clientY - top ) ) / height ).toFixed( 1 );
-
-                $( tooltip ).text( x + ', ' + y ).css({
+                $(tooltip).text(x + ', ' + y).css({
                     left: e.clientX - 30,
                     top: e.clientY - 30
                 }).show();
