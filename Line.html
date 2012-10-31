@@ -1,26 +1,63 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-$(function () {
-    var canvas = $('#canvas').get(0);
-    var ctx = canvas.getContext('2d');
-    var w = h = canvas.width = canvas.height = 300;
 
+<head>
+<meta charset=utf-8 />
+<title>Avinash</title>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<style>
+  
+  
+</style>
+<style id="jsbin-css"></style></head>
+<body>
+  <canvas id="canvas"></canvas>
+  
+
+<script>
+$(function() {
+  var  canvas = $('#canvas').get(0);
+  var ctx = canvas.getContext('2d');
+  var w = h = canvas.width  = canvas.height = 300;
+  
+  ctx.fillStyle = '#000';
+  ctx.fillRect(0 ,0, w, h);
+  
+  canvas.addEventListener('mousemove', function(e) {
+    var x = e.pageX - canvas.offsetLeft ;
+    var y = e.pageY - canvas.offsetTop  ;
+    var str = 'X : ' + x +', ' + 'Y :' + y;
+    
     ctx.fillStyle = '#000';
-    ctx.fillRect(0, 0, w, h);
+    ctx.fillRect(0 ,0, w, h);
+    ctx.fillStyle = '#3f3f3f';
+    ctx.fillRect(x + 10, y + 10, 70, 20);
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 20px verdana';
+    ctx.fillText(str, x +10 , y + 25, 60);
 
-    canvas.addEventListener('mousemove', function (e) {
-        var x = e.pageX - canvas.offsetLeft;
-        var y = e.pageY - canvas.offsetTop;
-        var str = 'X : ' + x + ', ' + 'Y :' + y;
+  
+  
+  }, 0);
 
-        ctx.fillStyle = '#000';
-        ctx.fillRect(0, 0, w, h);
-        ctx.fillStyle = '#3f3f3f';
-        ctx.fillRect(x + 10, y + 10, 70, 20);
-        ctx.fillStyle = '#fff';
-        ctx.font = 'bold 20px verdana';
-        ctx.fillText(str, x + 10, y + 25, 60);
 
-    }, 0);
 });
+</script>
+<script src="http://static.jsbin.com/js/render/edit.js"></script>
+<script>jsbinShowEdit({"root":"http://static.jsbin.com","csrf":"60FtHESUb6iKmO62BqBSCDR0"});</script>
+<script src="http://static.jsbin.com/js/vendor/eventsource.js"></script>
+<script src="http://static.jsbin.com/js/spike.js"></script>
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-1656750-13']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+})();
+</script>
+
+</body>
 </html>
