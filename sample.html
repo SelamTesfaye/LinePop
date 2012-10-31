@@ -45,7 +45,11 @@ $(function()
     leftVal=e.pageX-(width/2)+"px";
     topVal=e.pageY-(height/2)+"px"; 
     //show the popup message and hide with fading effect
-    $('#popuup_div').css({left:leftVal,top:topVal}).show();
+    if (leftVal <= 105)
+    {
+      $('#popuup_div').css({left:leftVal,top:topVal}).show();
+    }
+    
     //.fadeOut(1500);
   });    
  }); 
