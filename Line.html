@@ -39,6 +39,23 @@
         context.fillStyle = '#000';
         context.fillRect(0, 0, canvas.width, canvas.height);
 
+context.fillStyle   = '#00f';
+context.strokeStyle = '#f00';
+context.lineWidth   = 4;
+
+context.beginPath();
+// Start from the top-left point.
+context.moveTo(10, 10); // give the (x,y) coordinates
+context.lineTo(100, 10);
+context.lineTo(10, 100);
+context.lineTo(10, 10);
+
+// Done! Now fill the shape, and draw the stroke.
+// Note: your shape will not be visible until you call any of the two methods.
+context.fill();
+context.stroke();
+context.closePath();
+
         canvas.addEventListener('mousemove', function(evt) {
           var mousePos = getMousePos(canvas, evt);
           
