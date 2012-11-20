@@ -39,7 +39,7 @@
         context.fillStyle = '#000';
         context.fillRect(0, 0, canvas.width, canvas.height);
 
-        canvas.addEventListener('mouseclick', function(evt) {
+        canvas.addEventListener('mousemove', function(evt) {
           var mousePos = getMousePos(canvas, evt);
           
           var message = "X: " + mousePos.x + ",Y: " + mousePos.y;
