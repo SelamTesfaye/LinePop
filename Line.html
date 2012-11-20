@@ -16,26 +16,26 @@
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.font = '18pt Calibri';
         context.fillStyle = 'black';
-        if( (x >90 && x < 101) && ( y > 9 && y < 20) ||
+            
+        
+        context.strokeStyle = '#f00';
+        context.lineWidth   = 4;
+
+        context.beginPath();
+        // Start from the top-left point.
+        context.moveTo(10, 10); // give the (x,y) coordinates
+        context.lineTo(100, 10);
+        context.lineTo(10, 100);
+        context.lineTo(10, 10);
+
+        context.fill();
+        context.stroke();
+        context.closePath();
+
+       if( (x >90 && x < 101) && ( y > 9 && y < 20) ||
             (x > 10 && x < 25) && ( y > 9 && y < 20) ||
             (x > 10 && x < 25) && ( y > 10 && y < 100) )
-           context.fillText(message, x, y);      
-        
-context.strokeStyle = '#f00';
-context.lineWidth   = 4;
-
-context.beginPath();
-// Start from the top-left point.
-context.moveTo(10, 10); // give the (x,y) coordinates
-context.lineTo(100, 10);
-context.lineTo(10, 100);
-context.lineTo(10, 10);
-
-// Done! Now fill the shape, and draw the stroke.
-// Note: your shape will not be visible until you call any of the two methods.
-context.fill();
-context.stroke();
-context.closePath();
+           context.fillText(message, x, y);  
 
       }
       function getMousePos(canvas, evt) {
@@ -59,21 +59,20 @@ context.closePath();
         context.fillRect(0, 0, canvas.width, canvas.height);
 
 
-context.strokeStyle = '#f00';
-context.lineWidth   = 4;
+        context.strokeStyle = '#f00';
+        context.lineWidth   = 4;
 
-context.beginPath();
-// Start from the top-left point.
-context.moveTo(10, 10); // give the (x,y) coordinates
-context.lineTo(100, 10);
-context.lineTo(10, 100);
-context.lineTo(10, 10);
+        context.beginPath();
+        // Start from the top-left point.
+        context.moveTo(10, 10); // give the (x,y) coordinates
+        context.lineTo(100, 10);
+        context.lineTo(10, 100);
+        context.lineTo(10, 10);
 
-// Done! Now fill the shape, and draw the stroke.
-// Note: your shape will not be visible until you call any of the two methods.
-context.fill();
-context.stroke();
-context.closePath();
+
+        context.fill();
+        context.stroke();
+        context.closePath();
 
         canvas.addEventListener('mousemove', function(evt) {
           var mousePos = getMousePos(canvas, evt);
