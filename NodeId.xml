@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<row column_2="ToId">
+		<column_3>Xcoordinate</column_3>
+		<column_4>Ycoordinate</column_4>
+		<column_5>Pvalue</column_5>
+	</row>
+	<row column_2="cf00469">
+		<column_3>12</column_3>
+		<column_4>12</column_4>
+		<column_5>0.05</column_5>
+	</row>
+	<row column_2="cf00449">
+		<column_3>21</column_3>
+		<column_4>10</column_4>
+		<column_5>0.02</column_5>
+	</row>
+</root>
