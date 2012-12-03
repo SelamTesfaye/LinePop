@@ -1,7 +1,7 @@
 $(document).ready(function(){
-  $.get("students.xml",{},function(xml){
-    $('student',xml).each(function(i){
-      studentName = $(this).find("name").text();
+  $.get("EdgeId.xml",{},function(xml){
+    $('EdgeId',xml).each(function(i){
+      studentName = $(this).find("FromId").text();
       });
   });
 });
