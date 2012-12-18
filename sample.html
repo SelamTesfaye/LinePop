@@ -1,93 +1,18 @@
 <!DOCTYPE HTML PUBLIC >
 <html>
-<head>
-<title>Example of popup message on mouse clicked position </title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<script src="Pop.js" type="text/javascript" language="javascript"></script>
-<script language="javascript" type="text/javascript">
-function drawShape(){
-  // get the canvas element using the DOM
-  var canvas = document.getElementById('mycanvas');
  
-  // Make sure we don't execute when canvas isn't supported
-  if (canvas.getContext){
  
-    // use getContext to use the canvas for drawing
-    var ctx = canvas.getContext('2d');
- 
-    // Filled triangle
-    ctx.beginPath();
-    ctx.moveTo(25,25);
-    ctx.lineTo(105,25);
-    ctx.lineTo(25,105);
-    ctx.fill();
+ <div class="bubbleInfo">
+  <img class="trigger" src="http://mysite.com/path/to/image.png" />
+  <div class="popup">
+    <!-- your information content -->
+  </div>
+</div>
+
+    <head>
     
-    // Stroked triangle
-    ctx.beginPath();
-    ctx.moveTo(125,125);
-    ctx.lineTo(125,45);
-    ctx.lineTo(45,125);
-    ctx.closePath();
-    ctx.stroke();
- 
-  } else {
-    alert('You need Safari or Firefox 1.5+ to see this application.');
-  }
-}
-$(function()  
-{ 
-  $(document).click(function(e)
-  {
-    //getting height and width of the message box
-    var height = $('#popuup_div').height();
-    var width = $('#popuup_div').width();
-    //calculating offset for displaying popup message
-    leftVal=e.pageX-(width/2)+"px";
-    topVal=e.pageY-(height/2)+"px"; 
-    //show the popup message and hide with fading effect
-    if (leftVal <= 105)
-    {
-      $('#popuup_div').css({left:leftVal,top:topVal}).show();
-    }
     
-    //.fadeOut(1500);
-  });    
- }); 
-</script>
+    </head>
+    
 
-<style type="text/css">
-.popup_msg{
-  position:absolute;
-  z-index:10;   
-  width:172px;
-  height:102px;
-  text-align:center;
-  color:#FF0000;
-  font: 14px Verdana, Arial, Helvetica, sans-serif;
-  background:url(bg_image.gif) bottom right no-repeat;
- display:none;
-}
-</style>
-</head>
-
-//<body >
-<body onload="drawShape();">
-   <canvas id="mycanvas"></canvas>
-
-<div id="popuup_div" class="popup_msg">
-<br />
-/* insert the if else statement here if clicked at one coordinate display that value 
-else display the clicked coordinate*/
-Popup Message
-  <br /> 
- Message goes here <br /> 
- Message goes here
-</div> 
-
-<h1>Displaying pop-up message in mouse clicked position using jQuery</h1>
-<p>&nbsp;</p>
-<h3>Click on any position of the document with mouse</h3>
-<p>&nbsp;</p>
-
-</body>
 </html>
