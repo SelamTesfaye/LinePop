@@ -56,6 +56,14 @@
         context.stroke();
         context.closePath();
 
+      context.beginPath();
+      context.arc(200, 40, 10, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+      context.lineWidth = 2;
+      context.strokeStyle = '#003300';
+      context.stroke();
+      
        if( (x >90 && x < 101) && ( y > 9 && y < 20) ||
             (x > 10 && x < 25) && ( y > 9 && y < 20) ||
             (x > 10 && x < 25) && ( y > 10 && y < 100) )
@@ -98,7 +106,7 @@
         context.stroke();
         context.closePath();
         
-         context.beginPath();
+      context.beginPath();
       context.arc(200, 40, 10, 0, 2 * Math.PI, false);
       context.fillStyle = 'green';
       context.fill();
