@@ -69,20 +69,39 @@
       context.stroke();
       
       if( (x >190 && x < 210) && ( y > 30 && y < 50) )
+      {
             context.fillText(message, x, y);
+            context.beginPath();
+            context.rect(x -50, y -10, 100, 100);
+            context.fillStyle = '#fff';
+            context.fill();
+            context.lineWidth = 2;
+            context.strokeStyle = 'black';
+            context.stroke();
+      }
       if ((x > 290 && x < 310) && ( y > 30 && y < 50) )
+      {
            context.fillText(message, x, y);
+           context.beginPath();
+            context.rect(x -50, y -10, 100, 100);
+            context.fillStyle = '#fff';
+            context.fill();
+            context.lineWidth = 2;
+            context.strokeStyle = 'black';
+            context.stroke();
+      }
       if((x > 390 && x < 410) && ( y > 30 && y < 50) )
-          context.fillText(message, x, y);   
-          
-          
-      context.beginPath();
-      context.moveTo(x, y);
-      //context.lineTo(x + 200 - 50, y);
-      context.arcTo(x, y, x + 100, y + 50, 50);
-      //context.lineTo(x + 200, y + 200);
-      //context.lineWidth = 5;
-      context.stroke();
+      {
+          context.fillText(message, x, y);  
+          context.beginPath();
+            context.rect(x -50, y -10, 100, 100);
+            context.fillStyle = '#fff';
+            context.fill();
+            context.lineWidth = 2;
+            context.strokeStyle = 'black';
+            context.stroke(); 
+      }
+   
 
       }
       function getMousePos(canvas, evt) {
