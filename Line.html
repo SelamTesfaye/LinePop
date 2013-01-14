@@ -37,9 +37,7 @@
         context.lineTo(200, 40);
         context.lineTo(300, 40);
 
-        context.fill();
-        context.stroke();
-        context.closePath();
+        
 
            if ((x >40 && x < 60) && ( y > 30 && y < 50))
               context.fillText(message, x, y); 
@@ -49,6 +47,9 @@
                context.fillText(message, x, y);  
            context.fillText(message, x, y);  
 
+        context.fill();
+        context.stroke();
+        context.closePath();
       }
       function getMousePos(canvas, evt) {
         var rect = canvas.getBoundingClientRect(), root = document.documentElement;
@@ -77,10 +78,6 @@
         //context.lineTo(100, 40);
         //context.lineTo(200, 40);
         //context.lineTo(300, 40);
-
-        context.fill();
-        context.stroke();
-        context.closePath();
         
         
         var paper = Raphael(0, 0, 578, 400);
@@ -105,6 +102,9 @@
           // Sets the stroke attribute of the circle to white
           circle.attr("stroke", "#fff");
           
+        context.fill();
+        context.stroke();
+        context.closePath();
        
         canvas.addEventListener('mousemove', function(evt) {
           var mousePos = getMousePos(canvas, evt);
