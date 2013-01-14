@@ -83,10 +83,15 @@
 
         context.beginPath();
         // Start from the top-left point.
-        context.moveTo(10, 10); // give the (x,y) coordinates
-        context.lineTo(100, 10);
-        context.lineTo(10, 100);
-        context.lineTo(10, 10);
+       // context.moveTo(10, 10); // give the (x,y) coordinates
+       // context.lineTo(100, 10);
+        //context.lineTo(10, 100);
+        //context.lineTo(10, 10);
+        
+        context.moveTo(50, 40); // give the (x,y) coordinates
+        context.lineTo(100, 40);
+        context.lineTo(200, 40);
+        context.lineTo(300, 40);
 
 
         context.fill();
@@ -116,11 +121,7 @@
           // Sets the stroke attribute of the circle to white
           circle.attr("stroke", "#fff");
           
-        context.moveTo(50, 40); // give the (x,y) coordinates
-        context.lineTo(100, 40);
-        context.lineTo(200, 40);
-        context.lineTo(300, 40);
-     
+              
 
         canvas.addEventListener('mousemove', function(evt) {
           var mousePos = getMousePos(canvas, evt);
