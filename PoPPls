@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      #myCanvas {
+        border: 1px solid #9C9898;
+      }
+    </style>
+    <script type= "text/javascript" src = "jquery.js"> </script>
+    <script type= "text/javascript" src = "readXML.js"> </script>
+    <div id ="content area"></div>
+    <div class="bubbleInfo">
+        <img class="trigger" src="http://mysite.com/path/to/image.png" />
+        <div class="popup">
+          <!-- your information content -->
+        </div>
+      </div>
+       
+       
+        <script src="raphael-min.js"></script>
+       
+        
+      <script>
+          var paper = Raphael(10, 50, 320, 200);
+          // Creates circle at x = 50, y = 40, with radius 10
+          var circle = paper.circle(50, 40, 10);
+          // Sets the fill attribute of the circle to red (#f00)
+          //circle.attr("fill", "#f00");
+          // Sets the stroke attribute of the circle to white
+         // circle.attr("stroke", "#fff");
+    </script>
+   
+   <script>
+      function writeMessage(canvas, message,x,y) {
+        var context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.font = '18pt Calibri';
+        context.fillStyle = 'black';
+            
+        
+        context.strokeStyle = '#f00';
+        context.lineWidth = 4;
+
+        context.beginPath();
+        // Start from the top-left point.
+        context.moveTo(10, 10); // give the (x,y) coordinates
+        context.lineTo(100, 10);
+        context.lineTo(10, 100);
+        context.lineTo(10, 10);
+
+        context.fill();
+        context.stroke();
+        context.closePath();
+
+       if( (x >90 && x < 101) && ( y > 9 && y < 20) ||
+            (x > 10 && x < 25) && ( y > 9 && y < 20) ||
+            (x > 10 && x < 25) && ( y > 10 && y < 100) )
+           context.fillText(message, x, y);
+
+      }
+      function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect(), root = document.documentElement;
+
+        // return relative mouse position
+        var mouseX = evt.clientX - rect.top - root.scrollTop;
+        var mouseY = evt.clientY - rect.left - root.scrollLeft;
+        return {
+          x: mouseX,
+          y: mouseY
+        };
+      }
+
+      window.onload = function() {
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+        
+
+        context.fillStyle = '#000';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+
+
+        context.strokeStyle = '#f00';
+        context.lineWidth = 4;
+
+        context.beginPath();
+        // Start from the top-left point.
+        context.moveTo(10, 10); // give the (x,y) coordinates
+        context.lineTo(100, 10);
+        context.lineTo(10, 100);
+        context.lineTo(10, 10);
+
+
+        context.fill();
+        context.stroke();
+        context.closePath();
+
+
+          var paper = Raphael(0, 0, 578, 400);
+          // Creates circle at x = 50, y = 40, with radius 10
+          var circle = paper.circle(50, 40, 10);
+          // Sets the fill attribute of the circle to red (#f00)
+          circle.attr("fill", "#f00");
+          // Sets the stroke attribute of the circle to white
+          circle.attr("stroke", "#fff");
+                   
+ 
+          // Creates circle at x = 50, y = 40, with radius 10
+          var circle = paper.circle(100, 40, 10);
+          // Sets the fill attribute of the circle to red (#f00)
+          circle.attr("fill", "#f00");
+          // Sets the stroke attribute of the circle to white
+          circle.attr("stroke", "#fff");
+          
+          
+          // Creates circle at x = 50, y = 40, with radius 10
+          var circle = paper.circle(200, 40, 10);
+          // Sets the fill attribute of the circle to red (#f00)
+          circle.attr("fill", "#f00");
+          // Sets the stroke attribute of the circle to white
+          circle.attr("stroke", "#fff");
+
+
+        canvas.addEventListener('mousemove', function(evt) {
+          var mousePos = getMousePos(canvas, evt);
+          
+          var message = "X: " + mousePos.x + ",Y: " + mousePos.y;
+          writeMessage(canvas, message,mousePos.x ,mousePos.y);
+        }, false);
+      };
+
+    </script>
+  </head>
+  <body>
+     
+     <canvas id="myCanvas" width="578" height="200">
+       
+     </canvas>
+  </body>
+</html>
