@@ -12,6 +12,7 @@
     </style>
     <script type= "text/javascript" src = "jquery.js"> </script>
     <script type= "text/javascript" src = "readXML.js"> </script>
+    <script src="raphael-min.js"></script>
     <div id ="content area"></div>
     <div class="bubbleInfo">
         <img class="trigger" src="http://mysite.com/path/to/image.png" />
@@ -19,28 +20,17 @@
           <!-- your information content -->
         </div>
       </div>
-       
-       
-        <script src="raphael-min.js"></script>
-       
-        
-      <script>
-         
-                               
-      </script>
-                         
+      
    <script>
       function writeMessage(canvas, message,x,y) {
         var context = canvas.getContext('2d');
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.font = '18pt Calibri';
-        context.fillStyle = 'black';
-           
-        
+        context.fillStyle = 'black';      
         context.strokeStyle = '#fff';
         context.lineWidth = 4;
 
-             context.beginPath();
+        context.beginPath();
         // Start from the top-left point.
         context.moveTo(50, 40); // give the (x,y) coordinates
         context.lineTo(100, 40);
@@ -53,7 +43,7 @@
 
            if ((x >40 && x < 60) && ( y > 30 && y < 50))
               context.fillText(message, x, y); 
-           if((x > 90 && x < 110) && ( y > 30 && y < 50) )
+           if((x > 90 && x < 110) && ( y > 30 && y < 50))
               context.fillText(message, x, y); 
            if((x > 190 && x < 210) && ( y > 30 && y < 50)) 
                context.fillText(message, x, y);  
@@ -75,12 +65,8 @@
       window.onload = function() {
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext('2d');
-        
-
         context.fillStyle = '#fff';
         context.fillRect(0, 0, canvas.width, canvas.height);
-
-
         context.strokeStyle = '#fff';
         context.lineWidth = 4;
 
