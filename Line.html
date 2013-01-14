@@ -40,7 +40,16 @@
         context.strokeStyle = '#fff';
         context.lineWidth = 4;
 
-        
+             context.beginPath();
+        // Start from the top-left point.
+        context.moveTo(50, 40); // give the (x,y) coordinates
+        context.lineTo(100, 40);
+        context.lineTo(200, 40);
+        context.lineTo(300, 40);
+
+        context.fill();
+        context.stroke();
+        context.closePath();
 
            if ((x >40 && x < 60) && ( y > 30 && y < 50))
               context.fillText(message, x, y); 
