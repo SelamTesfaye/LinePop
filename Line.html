@@ -51,9 +51,11 @@
         context.stroke();
         context.closePath();
 
-       if( (x >90 && x < 101) && ( y > 9 && y < 20) ||
-            (x > 10 && x < 25) && ( y > 9 && y < 20) ||
-            (x > 10 && x < 25) && ( y > 10 && y < 100) )
+       if( (x >40 && x < 60) && ( y > 30 && y < 50) 
+            context.fillText(message, x, y); 
+      if(x > 90 && x < 110) && ( y > 30 && y < 50) 
+          context.fillText(message, x, y); 
+        if(x > 190 && x < 210) && ( y > 30 && y < 50) )
            context.fillText(message, x, y);  
 
       }
@@ -82,13 +84,7 @@
         context.lineWidth   = 4;
 
         context.beginPath();
-        // Start from the top-left point.
-       // context.moveTo(10, 10); // give the (x,y) coordinates
-       // context.lineTo(100, 10);
-        //context.lineTo(10, 100);
-        //context.lineTo(10, 10);
-        
-        
+            
 
 
         context.fill();
