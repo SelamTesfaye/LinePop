@@ -29,11 +29,33 @@
           // Creates circle at x = 50, y = 40, with radius 10
           var circle = paper.circle(50, 40, 10);
           // Sets the fill attribute of the circle to red (#f00)
-          //circle.attr("fill", "#f00");      
+          circle.attr("fill", "#f00");      
           // Sets the stroke attribute of the circle to white
-         // circle.attr("stroke", "#fff");
-    </script>
-   
+          circle.attr("stroke", "#fff");
+                               var chart = r.g.linechart(
+                          10, 10,      // top left anchor
+                          490, 180,    // bottom right anchor
+                          [
+                            [1, 2, 3, 4, 5, 6, 7],        // red line x-values
+                            [3.5, 4.5, 5.5, 6.5, 7, 8]    // blue line x-values
+                          ], 
+                          [
+                            [12, 32, 23, 15, 17, 27, 22], // red line y-values
+                            [10, 20, 30, 25, 15, 28]      // blue line y-values
+                          ], 
+                          {
+                             nostroke: false,   // lines between points are drawn
+                             axis: "0 0 1 1",   // draw axes on the left and bottom
+                             symbol: "disc",    // use a filled circle as the point symbol
+                             smooth: true,      // curve the lines to smooth turns on the chart
+                             dash: "-",         // draw the lines dashed
+                             colors: [
+                               "#995555",       // the first line is red  
+                               "#555599"        // the second line is blue
+                             ]
+                           });
+                          </script>
+                         
    <script>
       function writeMessage(canvas, message,x,y) {
         var context = canvas.getContext('2d');
