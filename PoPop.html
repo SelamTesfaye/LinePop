@@ -34,7 +34,7 @@
 
         context.beginPath();
         // Start from the top-left point.
-        context.moveTo(10, 10); // give the (x,y) coordinates
+        context.moveTo(50, 40); // give the (x,y) coordinates
         context.lineTo(200, 40);
         context.lineTo(300, 40);
         context.lineTo(400, 40);
@@ -70,9 +70,9 @@
       
       if( (x >190 && x < 210) && ( y > 30 && y < 50) )
       {
-            context.fillText(message, x, y);
+            context.fillText(message, x, y+20);
             context.beginPath();
-            context.rect(x, y+10, 100, 50);
+            context.rect(x, y, 100, 50);
             context.fillStyle = "rgba(255, 255, 255, 0.5)";
             context.fill();
             context.lineWidth = 2;
@@ -81,9 +81,9 @@
       }
       if ((x > 290 && x < 310) && ( y > 30 && y < 50) )
       {
-           context.fillText(message, x, y);
+           context.fillText(message, x, y+20);
            context.beginPath();
-            context.rect(x, y+10, 100, 50);
+            context.rect(x, y, 100, 50);
             context.fillStyle = "rgba(255, 255, 255, 0.5)";
             context.fill();
             context.lineWidth = 2;
@@ -92,9 +92,9 @@
       }
       if((x > 390 && x < 410) && ( y > 30 && y < 50) )
       {
-          context.fillText(message, x, y);  
+          context.fillText(message, x, y+20);  
           context.beginPath();
-            context.rect(x, y+10, 100, 50);
+            context.rect(x, y, 100, 50);
             context.fillStyle = "rgba(255, 255, 255, 0.5)";
             context.fill();
             context.lineWidth = 2;
