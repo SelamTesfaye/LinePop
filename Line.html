@@ -51,17 +51,11 @@
         context.stroke();
         context.closePath();
 
-       //if( (x >90 && x < 101) && ( y > 9 && y < 20) ||
-         //   (x > 10 && x < 25) && ( y > 9 && y < 20) ||
-           // (x > 10 && x < 25) && ( y > 10 && y < 100) )
-           //context.fillText(message, x, y);
-            if( (x >40 && x < 60) && ( y > 30 && y < 50) 
-            context.fillText(message, x, y); 
-      if(x > 90 && x < 110) && ( y > 30 && y < 50) 
-          context.fillText(message, x, y); 
-        if(x > 190 && x < 210) && ( y > 30 && y < 50) )
-           context.fillText(message, x, y);  
-
+       if( (x >90 && x < 101) && ( y > 9 && y < 20) ||
+            (x > 10 && x < 25) && ( y > 9 && y < 20) ||
+            (x > 10 && x < 25) && ( y > 10 && y < 100) )
+           context.fillText(message, x, y);
+            
       }
       function getMousePos(canvas, evt) {
         var rect = canvas.getBoundingClientRect(), root = document.documentElement;
