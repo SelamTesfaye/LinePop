@@ -57,7 +57,7 @@
               context.fillText(message, x, y); 
            if((x > 190 && x < 210) && ( y > 30 && y < 50)) 
                context.fillText(message, x, y);  
-          
+           context.fillText(message, x, y);  
 
       }
       function getMousePos(canvas, evt) {
@@ -97,8 +97,7 @@
           circle.attr("fill", "#f00");
           // Sets the stroke attribute of the circle to white
           circle.attr("stroke", "#fff");
-          
-          
+                   
            
           var circle = paper.circle(100, 40, 10);
           // Sets the fill attribute of the circle to red (#f00)
@@ -113,15 +112,10 @@
           // Sets the stroke attribute of the circle to white
           circle.attr("stroke", "#fff");
           
-        
-
-
         context.fill();
         context.stroke();
         context.closePath();
-
-          
-              
+      
 
         canvas.addEventListener('mousemove', function(evt) {
           var mousePos = getMousePos(canvas, evt);
