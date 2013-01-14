@@ -97,6 +97,14 @@
         context.fill();
         context.stroke();
         context.closePath();
+        
+         context.beginPath();
+      context.arc(50, 40, 10, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+      context.lineWidth = 2;
+      context.strokeStyle = '#003300';
+      context.stroke();
 
         canvas.addEventListener('mousemove', function(evt) {
           var mousePos = getMousePos(canvas, evt);
