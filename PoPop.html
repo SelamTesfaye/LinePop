@@ -10,18 +10,17 @@
         border: 1px solid #9C9898;
       }
     </style>
-           
-   <script type= "text/javascript" src = "jquery.js"> </script>
+    <script type= "text/javascript" src = "jquery.js"> </script>
     <script type= "text/javascript" src = "readXML.js"> </script>
-    
     <div id ="content area"></div>
     <div class="bubbleInfo">
         <img class="trigger" src="http://mysite.com/path/to/image.png" />
         <div class="popup">
-          checking checking checking<!-- your information content -->
+          <!-- your information content -->
         </div>
       </div>
-    
+       
+   
    <script>
       function writeMessage(canvas, message,x,y) {
         var context = canvas.getContext('2d');
@@ -68,8 +67,8 @@
       context.lineWidth = 2;
       context.strokeStyle = '#003300';
       context.stroke();
-    
-    if ((x > 169 && x < 190) && ( y > 52 && y < 68) )
+      
+      if( (x >100 && x < 215) && ( y > 37 && y < 55) )
       {
             context.fillText(message, x, y+20);
             context.beginPath();
@@ -80,11 +79,10 @@
             context.strokeStyle = 'black';
             context.stroke();
       }
-      
-      if ((x > 274 && x < 295) && ( y > 52 && y < 68) )
+      if ((x > 300 && x < 310) && ( y > 32 && y < 42) )
       {
-            context.fillText(message, x, y+20);
-            context.beginPath();
+           context.fillText(message, x, y+20);
+           context.beginPath();
             context.rect(x, y, 200, 50);
             context.fillStyle = "rgba(255, 255, 255, 0.05)";
             context.fill();
@@ -92,17 +90,16 @@
             context.strokeStyle = 'black';
             context.stroke();
       }
-      
-      if ((x > 371 && x < 390) && ( y > 52 && y < 68) )
+      if((x > 4000 && x < 410) && ( y > 32 && y < 42) )
       {
-            context.fillText(message, x, y+20);
-            context.beginPath();
+          context.fillText(message, x, y+20);  
+          context.beginPath();
             context.rect(x, y, 200, 50);
             context.fillStyle = "rgba(255, 255, 255, 0.05)";
             context.fill();
             context.lineWidth = 2;
             context.strokeStyle = 'black';
-            context.stroke();
+            context.stroke(); 
       }
    
 
