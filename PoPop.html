@@ -79,10 +79,11 @@
             context.strokeStyle = 'black';
             context.stroke();
       }
-      if ((x > 300 && x < 310) && ( y > 52 && y < 68) )
+      
+      if ((x > 296 && x < 306) && ( y > 52 && y < 68) )
       {
-           context.fillText(message, x, y+20);
-           context.beginPath();
+            context.fillText(message, x, y+20);
+            context.beginPath();
             context.rect(x, y, 200, 50);
             context.fillStyle = "rgba(255, 255, 255, 0.05)";
             context.fill();
@@ -90,10 +91,12 @@
             context.strokeStyle = 'black';
             context.stroke();
       }
+      
+     
       if((x > 4000 && x < 410) && ( y > 52 && y < 68) )
       {
-          context.fillText(message, x, y+20);  
-          context.beginPath();
+            context.fillText(message, x, y+20);  
+            context.beginPath();
             context.rect(x, y, 200, 50);
             context.fillStyle = "rgba(255, 255, 255, 0.05)";
             context.fill();
