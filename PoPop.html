@@ -58,11 +58,11 @@
       context.lineWidth = 2;
       context.strokeStyle = '#003300';
       context.stroke();
-      
-      if( (x >197 && x < 213) && ( y > 48 && y < 58) )
+   
+   if ((x > 197 && x < 213) && ( y > 48 && y < 58) )
       {
-            context.fillText(message, x, y+20);
-            context.beginPath();
+           context.fillText(message, x, y+20);
+           context.beginPath();
             context.rect(x, y, 200, 50);
             context.fillStyle = "rgba(255, 255, 255, 0.05)";
             context.fill();
