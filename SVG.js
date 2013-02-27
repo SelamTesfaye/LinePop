@@ -139,7 +139,11 @@ svgRoot.setAttribute('height', height);
  */
 
 function svgInit(evt) {
+<<<<<<< HEAD
 	docRoot = evt.target.ownerDocument;
+=======
+  docRoot = evt.target.ownerDocument;
+>>>>>>> 0de88f4b86ed77477759e497e6c707f42c1eca9b
 	viewRoot = evt.target.ownerDocument.getElementById("viewport");
 	text1 = evt.target.ownerDocument.getElementById("text1");
 	text2 = evt.target.ownerDocument.getElementById("text2");

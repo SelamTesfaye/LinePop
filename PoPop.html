@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      #myCanvas {
+        border: 1px solid #9C9898;
+      }
+    </style>
+           
+   
+   <script>
+      function writeMessage(canvas, message,x,y) {
+        var context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.font = '18pt Calibri';
+        context.fillStyle = 'black';
+            
+        
+        context.strokeStyle = '#f00';
+        context.lineWidth = 4;
+
+        context.beginPath();
+        // Start from the top-left point.
+        context.moveTo(55, 37); // give the (x,y) coordinates
+        context.lineTo(205, 37);
+        context.lineTo(305, 37);
+        context.lineTo(405, 37);
+
+        context.fill();
+        context.stroke();
+        context.closePath();
+
+      context.beginPath();
+      context.arc(205, 37, 10, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+      context.lineWidth = 2;
+      context.strokeStyle = '#003300';
+      context.stroke();
+      
+      context.beginPath();
+      context.arc(305, 37, 10, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+      context.lineWidth = 2;
+      context.strokeStyle = '#003300';
+      context.stroke();
+      
+      
+      context.beginPath();
+      context.arc(405, 37, 10, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+      context.lineWidth = 2;
+      context.strokeStyle = '#003300';
+      context.stroke();
+   
+   
+   if ((x > 195 && x < 215) && ( y > 30 && y < 50) )
+      {
+           context.fillText(message, x, y+20);
+           context.beginPath();
+            context.rect(x, y, 200, 50);
+            context.fillStyle = "rgba(255, 255, 255, 0.05)";
+            context.fill();
+            context.lineWidth = 2;
+            context.strokeStyle = 'black';
+            context.stroke();
+      }
+      if ((x > 296 && x < 311) && ( y > 30 && y < 50) )
+      {
+           context.fillText(message, x, y+20);
+           context.beginPath();
+            context.rect(x, y, 200, 50);
+            context.fillStyle = "rgba(255, 255, 255, 0.05)";
+            context.fill();
+            context.lineWidth = 2;
+            context.strokeStyle = 'black';
+            context.stroke();
+      }
+      if((x > 371 && x < 390) && ( y > 51 && y < 68) )
+      {
+          context.fillText(message, x, y+20);  
+          context.beginPath();
+            context.rect(x, y, 200, 50);
+            context.fillStyle = "rgba(255, 255, 255, 0.05)";
+            context.fill();
+            context.lineWidth = 2;
+            context.strokeStyle = 'black';
+            context.stroke(); 
+      }
+   
+
+      }
+      function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect(), root = document.documentElement;
+
+        // return relative mouse position
+        var mouseX = evt.clientX - rect.top - root.scrollTop;
+        var mouseY = evt.clientY - rect.left - root.scrollLeft;
+        return {
+          x: mouseX,
+          y: mouseY
+        };
+      }
+
+      window.onload = function() {
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+        
+
+        context.fillStyle = '#000';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+
+
+        context.strokeStyle = '#f00';
+        context.lineWidth = 4;
+
+        context.beginPath();
+        // Start from the top-left point.
+        context.moveTo(10, 10); // give the (x,y) coordinates
+        context.lineTo(100, 10);
+        context.lineTo(10, 100);
+        context.lineTo(10, 10);
+
+
+        context.fill();
+        context.stroke();
+        context.closePath();
+        
+      context.beginPath();
+      context.arc(200, 40, 10, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+      context.lineWidth = 2;
+      context.strokeStyle = '#003300';
+      context.stroke();
+
+        canvas.addEventListener('mousemove', function(evt) {
+          var mousePos = getMousePos(canvas, evt);
+          
+          var message = "X: " + mousePos.x + ",Y: " + mousePos.y;
+          writeMessage(canvas, message,mousePos.x ,mousePos.y);
+        }, false);
+      };
+
+    </script>
+  </head>
+  <body>
+     
+     <canvas id="myCanvas" width="578" height="200">
+       
+     </canvas>
+  </body>
+</html>

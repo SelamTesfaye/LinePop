@@ -1,21 +1,48 @@
-<div class="bubbleInfo">
-  <img class="trigger" src="http://mysite.com/path/to/image.png" />
-  <div class="popup">
-    <!-- Checking Selam CHecking -->
-  </div>
-</div>
+<!Doctype html>
 
-bubbleInfo {
-    position: relative;
-}
+<html>
 
-popup {
-    position: absolute;
-    display: none; /* keeps the popup hidden if no JS available */
-}
-
-
-
+<head>
+  <meta http-equiv="Content-type" content ="text/html; charset=utf-8"/>
+  <title>Bubble popup </title>
+  <style type = "text/css" media="screen">
+</head>
+<body id = "page">
+  <h1>bubble popup</h1>
+  <div class= "bubbleInfo">
+    <img class="trigger" src="http://jqueryfordesigners.com/demo/images/coda/nav-download.png" id= "download"/>
+    
+      <table class="popup">
+        <tbody><tr>
+          <td id="topleft" class= "corner"></td>
+          <td class="top"></td>
+          <td id="topright" class="corner"></td>
+        </tr>
+        
+        <tr>
+          <td class="left"></td>
+          
+          <td><table class="popup-contents">
+            <tbody><tr>
+            <th>File:</th>
+            <td>coda1.1.zip</td>
+          </tr>
+          <tr>
+            <th>Date:</th>
+            
+            <td>27/02/13</td>
+          </tr>
+          <tr>
+          
+            <th>Req:</th>
+            <td> Windows OS</td>
+          </tr>
+          <tr id="release-notes">
+            <th>Read the release notes:</th>
+            <td><a title="Read the release notes" href="./releasenotes.html>release notes</a></td>
+    </div>
+</body>
+</html>
 $(function () {
   $('.bubbleInfo').each(function () {
     // options
@@ -80,3 +107,4 @@ $(function () {
     });
   });
 });
+<!html>

@@ -1,21 +1,3 @@
-<div class="bubbleInfo">
-  <img class="trigger" src="http://mysite.com/path/to/image.png" />
-  <div class="popup">
-    <!-- Checking Selam CHecking -->
-  </div>
-</div>
-
-bubbleInfo {
-    position: relative;
-}
-
-popup {
-    position: absolute;
-    display: none; /* keeps the popup hidden if no JS available */
-}
-
-
-
 $(function () {
   $('.bubbleInfo').each(function () {
     // options

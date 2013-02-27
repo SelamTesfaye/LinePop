@@ -12,7 +12,6 @@
     </style>
     <script type= "text/javascript" src = "jquery.js"> </script>
     <script type= "text/javascript" src = "readXML.js"> </script>
-    <script src="raphael-min.js"></script>
     <div id ="content area"></div>
     <div class="bubbleInfo">
         <img class="trigger" src="http://mysite.com/path/to/image.png" />
@@ -20,36 +19,48 @@
           <!-- your information content -->
         </div>
       </div>
-      
+       
+       
+        <script src="raphael-min.js"></script>
+       
+        
+      <script>
+          var paper = Raphael(10, 50, 320, 200);
+          // Creates circle at x = 50, y = 40, with radius 10
+          var circle = paper.circle(50, 40, 10);
+          // Sets the fill attribute of the circle to red (#f00)
+          //circle.attr("fill", "#f00");
+          // Sets the stroke attribute of the circle to white
+         // circle.attr("stroke", "#fff");
+    </script>
+   
    <script>
       function writeMessage(canvas, message,x,y) {
         var context = canvas.getContext('2d');
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.font = '18pt Calibri';
-        context.fillStyle = 'black';      
-        context.strokeStyle = '#fff';
+        context.fillStyle = 'black';
+            
+        
+        context.strokeStyle = '#f00';
         context.lineWidth = 4;
 
         context.beginPath();
         // Start from the top-left point.
-        context.moveTo(50, 40); // give the (x,y) coordinates
-        context.lineTo(100, 40);
-        context.lineTo(200, 40);
-        context.lineTo(300, 40);
-
-        
-
-           if ((x >40 && x < 60) && ( y > 30 && y < 50))
-              context.fillText(message, x, y); 
-           if((x > 90 && x < 110) && ( y > 30 && y < 50))
-              context.fillText(message, x, y); 
-           if((x > 190 && x < 210) && ( y > 30 && y < 50)) 
-               context.fillText(message, x, y);  
-           context.fillText(message, x, y);  
+        context.moveTo(10, 10); // give the (x,y) coordinates
+        context.lineTo(100, 10);
+        context.lineTo(10, 100);
+        context.lineTo(10, 10);
 
         context.fill();
         context.stroke();
         context.closePath();
+
+       if( (x >90 && x < 101) && ( y > 9 && y < 20) ||
+            (x > 10 && x < 25) && ( y > 9 && y < 20) ||
+            (x > 10 && x < 25) && ( y > 10 && y < 100) )
+           context.fillText(message, x, y);
+
       }
       function getMousePos(canvas, evt) {
         var rect = canvas.getBoundingClientRect(), root = document.documentElement;
@@ -66,48 +77,27 @@
       window.onload = function() {
         var canvas = document.getElementById('myCanvas');
         var context = canvas.getContext('2d');
-        context.fillStyle = '#fff';
+        
+
+        context.fillStyle = '#000';
         context.fillRect(0, 0, canvas.width, canvas.height);
-        context.strokeStyle = '#fff';
+
+
+        context.strokeStyle = '#f00';
         context.lineWidth = 4;
 
-              
         context.beginPath();
         // Start from the top-left point.
-        //context.moveTo(50, 40); // give the (x,y) coordinates
-        //context.lineTo(100, 40);
-        //context.lineTo(200, 40);
-        //context.lineTo(300, 40);
-        
-        
-          var paper = Raphael(0, 0, 578, 400);
-          // Creates circle at x = 50, y = 40, with radius 10
-          var circle = paper.circle(50, 40, 10);
-          // Sets the fill attribute of the circle to red (#f00)
-          circle.attr("fill", "#f00");
-          // Sets the stroke attribute of the circle to white
-          circle.attr("stroke", "#fff");
-                   
- 
-          // Creates circle at x = 50, y = 40, with radius 10
-          var circle = paper.circle(100, 40, 10);
-          // Sets the fill attribute of the circle to red (#f00)
-          circle.attr("fill", "#f00");
-          // Sets the stroke attribute of the circle to white
-          circle.attr("stroke", "#fff");
-          
-          
-          // Creates circle at x = 50, y = 40, with radius 10
-          var circle = paper.circle(200, 40, 10);
-          // Sets the fill attribute of the circle to red (#f00)
-          circle.attr("fill", "#f00");
-          // Sets the stroke attribute of the circle to white
-          circle.attr("stroke", "#fff");
-                    
+        context.moveTo(10, 10); // give the (x,y) coordinates
+        context.lineTo(100, 10);
+        context.lineTo(10, 100);
+        context.lineTo(10, 10);
+
+
         context.fill();
         context.stroke();
         context.closePath();
-       
+
         canvas.addEventListener('mousemove', function(evt) {
           var mousePos = getMousePos(canvas, evt);
           
