@@ -15,6 +15,10 @@
    <script src="CodaBub.html" type="text/html"></script>
    
    <script>
+       
+       var paper = new Raphael(0,0,200,200);
+       paper.infoBubble();
+        
       function writeMessage(canvas, message,x,y) {
         var context = canvas.getContext('2d');
         context.clearRect(0, 0, canvas.width, canvas.height);
