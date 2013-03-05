@@ -1,5 +1,5 @@
 $(function () { 
-        $ Raphael.fn.infoBubble = function () {
+        Raphael.fn.infoBubble = function () {
         $('.bubbleInfo').each(function () {
             var distance = 10;
             var time = 250;
