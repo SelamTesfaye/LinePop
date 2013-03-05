@@ -1,4 +1,4 @@
- src="raphael.js" type="text/javascript"
+<script src="raphael.js" type="text/javascript"> 
 
 $(function () { 
         Raphael.fn.infoBubble = function () {
