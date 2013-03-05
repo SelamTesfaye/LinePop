@@ -1,4 +1,5 @@
-  
+ src="raphael.js" type="text/javascript"
+
 $(function () { 
         Raphael.fn.infoBubble = function () {
         $('.bubbleInfo').each(function () {
