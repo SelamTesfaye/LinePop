@@ -16,10 +16,12 @@
    
    <script>
        
-       var paper = new Raphael(0,0,200,200);
-       paper.infoBubble();
-        
+      
       function writeMessage(canvas, message,x,y) {
+        
+         var paper = new Raphael(0,0,200,200);
+         paper.infoBubble();
+        
         var context = canvas.getContext('2d');
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.font = '18pt Calibri';
