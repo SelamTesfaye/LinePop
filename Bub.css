@@ -1,6 +1,4 @@
-  <style type="text/css" media="screen">
-    
-    <!--
+  
         * {
             margin: 0;
             padding: 0;
@@ -72,11 +70,10 @@
         	}
   
         
-    -->
 
-  </style>
-        
-        <style>
+
+
+
       body {
         margin: 0px;
         padding: 0px;
@@ -84,5 +81,5 @@
       #myCanvas {
         border: 1px solid #9C9898;
       }
-    </style>
+
      
