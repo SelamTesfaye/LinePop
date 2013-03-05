@@ -1,5 +1,5 @@
- $(function () {
-        Raphael.fn.infoBubble = function () {
+ 
+        $ Raphael.fn.infoBubble = function () {
         $('.bubbleInfo').each(function () {
             var distance = 10;
             var time = 250;
@@ -53,7 +53,7 @@
                 return false;
             });
         });
-      };
+      
       
     var paper = new Raphael(0,0,200,200);
     paper.infoBubble();
