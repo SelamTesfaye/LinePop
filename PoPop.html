@@ -11,17 +11,12 @@
       }
     </style>
       
-     <script src="raphael.js" type="text/javascript"></script>    
-   <script src="CodaBub.html" type="text/html"></script>
    
    <script>
        
       
       function writeMessage(canvas, message,x,y) {
-        
-         var paper = new Raphael(0,0,200,200);
-         paper.infoBubble();
-        
+                  
         var context = canvas.getContext('2d');
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.font = '18pt Calibri';
