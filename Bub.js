@@ -1,4 +1,5 @@
-
+<script src="jquery.js" type="text/javascript"></script>
+     <script src="raphael.js"></script>
 
 
 $(function () { 
