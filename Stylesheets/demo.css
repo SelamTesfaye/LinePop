@@ -73,3 +73,16 @@
   
         
     -->
+
+  </style>
+        
+        <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      #myCanvas {
+        border: 1px solid #9C9898;
+      }
+    </style>
+        
