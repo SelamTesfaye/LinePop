@@ -1,6 +1,4 @@
- 
- 
- 
+  
 $(function () { 
         Raphael.fn.infoBubble = function () {
         $('.bubbleInfo').each(function () {
