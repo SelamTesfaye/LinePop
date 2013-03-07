@@ -20,11 +20,11 @@ $(function () {
         leftgutter = 30,
         bottomgutter = 20,
         r = Raphael("chart", width, height),
-        txt = { "font": '10px Fontin-Sans, Arial', stroke: "none", fill: "#fff" },
+        txt = {"font": '10px Fontin-Sans, Arial', stroke: "none", fill: "#fff"},
         X = (width - leftgutter) / axisx.length,
         Y = (height - bottomgutter) / axisy.length,
         color = $("#chart").css("color");
-    max = Math.round(X / 2) - 1;
+        max = Math.round(X / 2) - 1;
     // r.rect(0, 0, width, height, 5).attr({fill: "#000", stroke: "none"});
     for (var i = 0, ii = axisx.length; i < ii; i++) {
         r.text(leftgutter + X * (i + .5), 294, axisx[i]).attr(txt);
@@ -39,13 +39,13 @@ $(function () {
             if (R) {
                 (function (dx, dy, R, value) {
                     var color = "hsb(" + [(1 - R / max) * .5, 1, .75] + ")";
-                    var dt = r.circle(dx + 60 + R, dy + 10, R).attr({ stroke: "none", fill: color });
+                    var dt = r.circle(dx + 60 + R, dy + 10, R).attr({stroke: "none", fill: color});
                     if (R < 6) {
-                        var bg = r.circle(dx + 60 + R, dy + 10, 6).attr({ stroke: "none", fill: "#000", opacity: .4 }).hide();
+                        var bg = r.circle(dx + 60 + R, dy + 10, 6).attr({stroke: "none", fill: "#000", opacity: .4}).hide();
                     }
                     var lbl = r.text(dx + 60 + R, dy + 10, data[o])
-                            .attr({ "font": '10px Fontin-Sans, Arial', stroke: "none", fill: "#fff" }).hide();
-                    var dot = r.circle(dx + 60 + R, dy + 10, max).attr({ stroke: "none", fill: "#000", opacity: 0 });
+                            .attr({"font": '10px Fontin-Sans, Arial', stroke: "none", fill: "#fff"}).hide();
+                    var dot = r.circle(dx + 60 + R, dy + 10, max).attr({stroke: "none", fill: "#000", opacity: 0});
                     dot[0].onmouseover = function () {
                         if (bg) {
                             bg.show();
@@ -63,10 +63,6 @@ $(function () {
                             dt.attr("fill", color);
                         }
                         lbl.hide();
-                    };
-                    dot[0].onclick = function () {
-                        var disp = document.getElementById("lblDisplay");
-                        disp.textContent = R.toString();
                     };
                 })(leftgutter + X * (j + .5) - 60 - R, Y * (i + .5) - 10, R, data[o]);
             }
