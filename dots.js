@@ -1,17 +1,18 @@
-$(function () {
+
+(function () {
     // Grab the data
     var data = [],
         axisx = [],
         axisy = [],
         table = $("#for-chart");
-    $("tbody td", table).each(function (i) {
+    ("tbody td", table).each(function (i) {
         data.push(parseFloat($(this).text(), 10));
     });
     table.hide();
-    $("tbody th", table).each(function () {
+    ("tbody th", table).each(function () {
         axisy.push($(this).text());
     });
-    $("tfoot th", table).each(function () {
+    ("tfoot th", table).each(function () {
         axisx.push($(this).text());
     });
     // Draw
